@@ -5,7 +5,7 @@ services:
     region: ohio
     plan: free
     dockerContext: .
-    dockerfilePath: ./backend/Dockerfile
+    dockerfilePath: ./Dockerfile
     buildCommand: ""
     startCommand: ""
     envVars:
