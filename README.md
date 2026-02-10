@@ -2,7 +2,17 @@
 
 A full-stack e-commerce application built with Spring Boot and React.
 
-## Prerequisites
+## 🌟 Key Features & Templates
+
+### Premium UI Templates
+-   **Modern Home Page**: Features a stunning hero section with parallax effects and a curated "Shop by Category" grid.
+-   **Product Catalog**: Responsive grid layout with hover effects, quick view options, and dynamic filtering.
+-   **Admin Dashboard**: Professional analytics dashboard for tracking sales and user growth.
+
+### Core Functionality
+-   **❤️ Wishlist System**: Dedicated wishlist page for users to save their favorite items.
+-   **💳 Payment Integration**: Realistic checkout flow supporting Credit Cards and UPI simulation.
+-   **🔐 Secure Auth**: JWT-based authentication with Role-Based Access Control (Admin/User).
 - Java 17+
 - Node.js 18+
 - PostgreSQL
