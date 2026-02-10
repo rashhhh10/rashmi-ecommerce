@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: rashmi-ecommerce-backend
+    env: docker
+    region: ohio
+    plan: free
+    dockerContext: ./backend
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: rashmi-db
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: rashmi-db
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: rashmi-db
+          property: password
+      - key: RASHMI_APP_JWTSECRET
+        generateValue: true
+      - key: RASHMI_APP_JWTEXPIRATIONMS
+        value: 86400000
+
+databases:
+  - name: rashmi-db
+    databaseName: rashmi_ecommerce
+    user: rashmi_user
+    plan: free
