@@ -13,6 +13,16 @@ A full-stack e-commerce application built with Spring Boot and React.
 -   **❤️ Wishlist System**: Dedicated wishlist page for users to save their favorite items.
 -   **💳 Payment Integration**: Realistic checkout flow supporting Credit Cards and UPI simulation.
 -   **🔐 Secure Auth**: JWT-based authentication with Role-Based Access Control (Admin/User).
+
+### 📸 Template Previews
+#### Home Page - Modern Hero & Categories
+![Home Template](https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80)
+
+#### Product Catalog - Grid Layout
+![Product Catalog](https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80)
+
+#### Wishlist & Cart - Clean UI
+![Shopping Experience](https://images.unsplash.com/photo-1556742046-e1e19594d4d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80)
 - Java 17+
 - Node.js 18+
 - PostgreSQL
