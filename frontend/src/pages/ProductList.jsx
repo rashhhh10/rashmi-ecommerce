@@ -65,6 +65,18 @@ const ProductList = () => {
                                 <Link to={`/products/${product.id}`} className="bg-indigo-600 text-white px-4 py-2 rounded text-sm hover:bg-indigo-700">
                                     View Details
                                 </Link>
+                                <button className="text-red-500 hover:text-red-700 ml-2" title="Add to Wishlist"
+                                    onClick={async () => {
+                                        const user = JSON.parse(localStorage.getItem('user'));
+                                        if (!user) return alert("Please login first");
+                                        try {
+                                            await api.post(`/wishlist/${user.id}/add?productId=${product.id}`);
+                                            alert("Added to Wishlist!");
+                                        } catch (e) { console.error(e); }
+                                    }}
+                                >
+                                    ❤️
+                                </button>
                             </div>
                         </div>
                     </div>

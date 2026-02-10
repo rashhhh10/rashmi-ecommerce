@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import ProductList from './pages/ProductList'
 import ProductDetail from './pages/ProductDetail'
 import Cart from './pages/Cart'
+import Wishlist from './pages/Wishlist'
 import Checkout from './pages/Checkout'
 import AdminDashboard from './pages/AdminDashboard'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/products" element={<ProductList />} />
                     <Route path="/products/:id" element={<ProductDetail />} />
                     <Route path="/cart" element={<Cart />} />
+                    <Route path="/wishlist" element={<Wishlist />} />
                     <Route path="/checkout" element={
                         <ProtectedRoute>
                             <Checkout />

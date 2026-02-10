@@ -73,7 +73,18 @@ const ProductDetail = () => {
                     >
                         Add to Cart
                     </button>
-                    {/* Wishlist button could go here */}
+                    <button
+                        onClick={async () => {
+                            if (!currentUser) return navigate('/login');
+                            try {
+                                await api.post(`/wishlist/${currentUser.id}/add?productId=${product.id}`);
+                                alert("Added to Wishlist!");
+                            } catch (e) { console.error(e); }
+                        }}
+                        className="bg-gray-200 text-gray-800 px-4 py-3 rounded-lg font-bold hover:bg-gray-300 transition duration-300"
+                    >
+                        ❤️
+                    </button>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaShoppingCart, FaUser, FaHeart } from 'react-icons/fa';
 
 const Navbar = () => {
     const { currentUser, logout } = useContext(AuthContext);
@@ -14,9 +14,14 @@ const Navbar = () => {
                     <Link to="/products" className="text-gray-600 hover:text-indigo-600">Products</Link>
 
                     {currentUser && (
-                        <Link to="/cart" className="text-gray-600 hover:text-indigo-600 flex items-center">
-                            <FaShoppingCart className="mr-1" /> Cart
-                        </Link>
+                        <>
+                            <Link to="/wishlist" className="text-gray-600 hover:text-indigo-600 flex items-center">
+                                <FaHeart className="mr-1" /> Wishlist
+                            </Link>
+                            <Link to="/cart" className="text-gray-600 hover:text-indigo-600 flex items-center">
+                                <FaShoppingCart className="mr-1" /> Cart
+                            </Link>
+                        </>
                     )}
 
                     {currentUser ? (
