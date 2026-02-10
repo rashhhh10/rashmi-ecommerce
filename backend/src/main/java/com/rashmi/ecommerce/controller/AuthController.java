@@ -29,7 +29,6 @@ import com.rashmi.ecommerce.dto.response.MessageResponse;
 import com.rashmi.ecommerce.security.jwt.JwtUtils;
 import com.rashmi.ecommerce.security.services.UserDetailsImpl;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
